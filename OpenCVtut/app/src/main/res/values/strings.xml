@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">OpenCVtut</string>
+    <string name="player1">Player 1</string>
+    <string name="player2">Player 2</string>
+    <string name="wordmark">Odds or Evens!</string>
+    <string name="newmatch">Start new match!</string>
+    <string name="startmatch">Start</string>
+    <string name="p1is">Player 1 is:</string>
+    <string name="p2is">Player 2 is:</string>
+    <string name="p1winner">Player 1 wins!</string>
+    <string name="p2winner">Player 2 wins!</string>
+</resources>

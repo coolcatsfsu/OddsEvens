@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.aec12e.opencvtut.MainActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <org.opencv.android.JavaCameraView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/opencvsurface"
+    />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/upper"
+        android:src="@mipmap/upper"
+        android:layout_alignParentStart="true"
+        android:scaleType="fitStart"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lower"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/lower"
+        android:scaleType="fitEnd"
+        android:visibility="invisible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:id="@+id/done"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:tag="2"
+        android:onClick="showBadge" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:id="@+id/oddsBtn"
+        android:layout_above="@+id/done"
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"
+        android:tag="1"
+        android:onClick="showBadge" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="switch"
+        android:id="@+id/button"
+        android:layout_alignTop="@+id/done"
+        android:layout_toStartOf="@+id/done"
+        android:onClick="switchUser"
+        android:tag="1" />
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:id="@+id/badge"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:maxWidth="50dp"
+        android:minHeight="100dp"
+        android:maxHeight="50dp"
+        android:longClickable="false"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_above="@+id/oddsBtn"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/turntitle"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:text="play"
+        android:singleLine="false"
+        android:phoneNumber="true"
+        android:tag="1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="winodds"
+        android:id="@+id/winodds"
+        android:layout_below="@+id/oddsBtn"
+        android:layout_toEndOf="@+id/done"
+        android:tag="1"
+        android:onClick="showWinner" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="winevens"
+        android:id="@+id/winevens"
+        android:layout_above="@+id/winodds"
+        android:layout_toEndOf="@+id/done"
+        android:tag="0"
+        android:onClick="showWinner" />
+
+</RelativeLayout>
