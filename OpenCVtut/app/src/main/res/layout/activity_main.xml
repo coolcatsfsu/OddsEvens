@@ -3,17 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
     tools:context="com.aec12e.opencvtut.MainActivity">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
          TextureView, etc. -->
 
-    <org.opencv.android.JavaCameraView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/opencvsurface"
-    />
+    <com.aec12e.opencvtut.CustomSurfaceView
+        android:id="@+id/main_surface_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        opencv:camera_id="any"
+        opencv:show_fps="true" />
 
     <ImageView
         android:layout_width="match_parent"
@@ -111,5 +113,22 @@
         android:layout_toEndOf="@+id/done"
         android:tag="0"
         android:onClick="showWinner" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/numberOfFingers"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar1"
+        android:layout_below="@+id/badge"
+        android:layout_centerHorizontal="true"
+        android:max="30000" />
 
 </RelativeLayout>
